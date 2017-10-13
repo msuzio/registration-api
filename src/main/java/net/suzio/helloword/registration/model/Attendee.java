@@ -4,9 +4,12 @@ public class Attendee {
 	private String firstName;
 	private String lastName;
 	private String address;
+	private String address2;
 	private State state;
 	private Country country;
-	private ZipCode zip;
+	private String zipCode;
+	private String zipPlusFour;
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -37,14 +40,16 @@ public class Attendee {
 	public void setCountry(Country country) {
 		this.country = country;
 	}
-	public ZipCode getZip() {
-		return zip;
+	public String getZipCode() {
+		return zipCode;
 	}
-	public void setZip(ZipCode zip) {
-		this.zip = zip;
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
-	
-	
-	
-
+	public String getZipPlusFour() {
+		return zipPlusFour;
+	}
+	public void setZipPlusFour(String zipPlusFour) {
+		this.zipPlusFour = zipPlusFour;
+	}
 }

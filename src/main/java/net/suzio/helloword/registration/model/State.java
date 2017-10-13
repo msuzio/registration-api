@@ -52,9 +52,13 @@ public enum State {
 	WI("WISCONSIN"),
 	WY("WYOMING");
 
-	private String name;
+	private String fullName;
 
-	State(String name) {
-		this.name = name;	
+	public String getFullName() {
+		return fullName;
+	}
+
+	State(String fullname) {
+		this.fullName = fullname;	
 	}
 }
