@@ -1,11 +1,11 @@
-package net.suzio.helloword.registration.model.validation;
+package net.suzio.helloworld.registration.model.validation;
 
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import net.suzio.helloword.registration.model.Attendee;
+import net.suzio.helloworld.registration.model.Attendee;
 
 @Component("beforeCreateAttendeeValidator")
 public class AttendeeValidator implements Validator {
