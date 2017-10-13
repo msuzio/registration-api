@@ -4,6 +4,7 @@ import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 
 @Entity
 public class Attendee {
@@ -88,9 +89,9 @@ public class Attendee {
 		this.zipPlusFour = zipPlusFour;
 	}
 
-	public Attendee generateUUID() {
+	@PrePersist
+	protected void  generateUUID() {
 		this.id = UUID.randomUUID().toString();
-		return this;
 	}
 
 	@Override

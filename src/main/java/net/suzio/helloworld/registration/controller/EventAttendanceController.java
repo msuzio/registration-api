@@ -17,8 +17,8 @@ import net.suzio.helloworld.registration.model.State;
 import net.suzio.helloworld.registration.repository.AttendeeRepository;
 
 @RestController
-@RequestMapping(value = "/register")
-public class RegisterController {
+@RequestMapping(value = "/event")
+public class EventAttendanceController {
 	
 	@Autowired 
 	private AttendeeRepository attendeeRepository;
@@ -33,7 +33,6 @@ public class RegisterController {
 			}
 		}
 		return allAttendees;
-
 	}
 
 	@RequestMapping(value = "/states", method = RequestMethod.GET)
@@ -42,8 +41,8 @@ public class RegisterController {
 	}
 
 	@ResponseBody
-	@PostMapping("/attendee")
+	@PostMapping("/register")
 	public Attendee saveAttendee(@RequestBody Attendee attendee) {
-		return attendeeRepository.save(attendee.generateUUID());
+		return attendeeRepository.save(attendee);
 	}
 }
