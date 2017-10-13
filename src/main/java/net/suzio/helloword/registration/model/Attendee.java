@@ -1,14 +1,23 @@
 package net.suzio.helloword.registration.model;
 
+import java.util.UUID;
+
 public class Attendee {
+	// auto-generated before persist
+	private String id;
+	
 	private String firstName;
 	private String lastName;
 	private String address;
-	private String address2;
+	private String address2 = "";
 	private State state;
 	private Country country;
 	private String zipCode;
-	private String zipPlusFour;
+	private String zipPlusFour = "";
+
+	public String getId() {
+		return id;
+	}
 	
 	public String getFirstName() {
 		return firstName;
@@ -27,6 +36,13 @@ public class Attendee {
 	}
 	public void setAddress(String address) {
 		this.address = address;
+	}
+	
+	public void setAddress2(String address2) {
+		this.address2 = address2;
+	}
+	public String getAddress2() {
+		return address2;
 	}
 	public State getState() {
 		return state;
@@ -51,5 +67,10 @@ public class Attendee {
 	}
 	public void setZipPlusFour(String zipPlusFour) {
 		this.zipPlusFour = zipPlusFour;
+	}
+	
+	public Attendee generateUUID() {
+		this.id = UUID.randomUUID().toString();
+		return this;
 	}
 }
