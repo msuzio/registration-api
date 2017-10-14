@@ -1,6 +1,9 @@
 package net.suzio.helloworld.registration.controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +15,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import net.suzio.helloworld.registration.model.Attendee;
-import net.suzio.helloworld.registration.model.Country;
 import net.suzio.helloworld.registration.model.State;
 import net.suzio.helloworld.registration.repository.AttendeeRepository;
 
@@ -32,6 +34,7 @@ public class EventAttendanceController {
 				allAttendees.add(attendee);
 			}
 		}
+		
 		return allAttendees;
 	}
 
